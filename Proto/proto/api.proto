@@ -1,0 +1,44 @@
+syntax = "proto3";
+package api;
+
+option csharp_namespace = "Common.Api";
+
+message Error {
+    enum Code {
+        RUNTIME_EXCEPTION = 0;
+    }
+    int32 code = 1;
+    string message = 2;
+}
+
+message Envelope {
+    int32 collation_id = 1;
+
+    oneof payload {
+        Error error = 2;
+        Heartbeat Heartbeat = 3;
+        TGroupsList groups = 4;
+    }
+}
+
+message Heartbeat {
+}
+
+message TGroupsList {
+    /// Upper limit on the maximum number of groups to return per request. Max value is 100.
+    int64 page_limit = 1;
+    /// Whether to order the result ascending or descending based on the filters defined below.
+    bool order_by_asc = 2;
+    /// Filter used to search for groups.
+    oneof filter {
+      /// Find groups matching the given language tag.
+      string lang = 3; // >= for lang variations
+      /// Find groups created after a given time.
+      int64 created_at = 4; // >= after the given time
+      /// Find groups that have members up to (and equal to) the count value.
+      int64 count = 5; // up to max count, <= anything less than or equal to given count.
+    }
+    /// Binary cursor value used to paginate results.
+    /// The value of this comes from TGroups.cursor.
+    string cursor = 7; // gob(%{struct(int64/string, int64, bytes)})
+}

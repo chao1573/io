@@ -43,7 +43,7 @@
     <Compile Include="Session\SessionRegistry.cs" />
     <Compile Include="Session\SessionTcp.cs" />
     <Compile Include="Session\SessionService.cs" />
-    <Compile Include="MessageDispacher.cs" />
+    <Compile Include="MessageDispatcher.cs" />
     <Compile Include="IMessageProcessor.cs" />
     <Compile Include="MatchService.cs" />
   </ItemGroup>

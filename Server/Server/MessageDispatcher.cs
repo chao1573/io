@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace IO
 {
-    public class MessageDispacher
+    public class MessageDispatcher
     {
         Dictionary<Envelope.PayloadOneofCase, IMessageProcessor> m_processors = new Dictionary<Envelope.PayloadOneofCase, IMessageProcessor>();
 
-        public MessageDispacher(MatchService matchService)
+        public MessageDispatcher(MatchService matchService)
         {
             m_processors[Envelope.PayloadOneofCase.Groups] = matchService;
         }

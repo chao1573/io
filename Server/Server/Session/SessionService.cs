@@ -8,7 +8,7 @@ namespace IO.Session
         SessionRegistry m_registry;
         TcpServer m_tcpServer;
 
-        public SessionService(SessionRegistry registry, MessageDispacher dispatcher)
+        public SessionService(SessionRegistry registry, MessageDispatcher dispatcher)
         {
             m_registry = registry;
 

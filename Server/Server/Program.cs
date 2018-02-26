@@ -14,7 +14,7 @@ namespace IO
             Console.WriteLine("Hello World!");
 
             MatchService matchService = new MatchService();
-            MessageDispacher dispatcher = new MessageDispacher(matchService);
+            MessageDispatcher dispatcher = new MessageDispatcher(matchService);
             SessionRegistry sessionRegistry = new SessionRegistry();
 
             SessionService sessionService = new SessionService(sessionRegistry, dispatcher);

@@ -1,0 +1,39 @@
+﻿{
+  "Player": {
+    "Speed": {
+      "value": 0.0,
+      "maxValue":3.0
+    },
+    "AngularSpeed":
+    {
+      "value":100.0
+    },
+    "Position": {
+      "value": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    },
+    "Direction": {
+      "value": {
+        "X": 1.0,
+        "Y": 0.0, 
+        "Z": 0.0
+      }
+    },
+    "Asset": {
+      "value": "Player"
+    }
+  },
+  "Bullet":{
+    "Speed": {
+      "value": 10.0
+    },
+    "Asset":
+    {
+      "value":"Bullet"
+    }
+  }
+  
+}

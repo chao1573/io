@@ -1,7 +1,11 @@
-﻿namespace Common.Api.Sources.Systems.Command
+﻿using  Entitas;
+
+public sealed class CommandSystems :Feature
 {
-    public class CommandSystems
+    public CommandSystems(Contexts contexts)
     {
-        
+        Add(new JoinGameCommandSystem(contexts));
+        Add(new MoveCommandSystem(contexts));
+        Add(new ShootCommandSystem(contexts));
     }
 }

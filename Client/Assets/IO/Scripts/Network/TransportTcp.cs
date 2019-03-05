@@ -68,7 +68,16 @@ namespace IO.Net
             string[] splits = uri.Split(':');
 
             IPHostEntry ipHostInfo = Dns.GetHostEntry(splits[0]);
-            IPAddress ipAddress = ipHostInfo.AddressList[0];
+            IPAddress ipAddress = null;
+            foreach (var address in ipHostInfo.AddressList)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    ipAddress = address;
+                    break;
+                }
+            }
+
             IPEndPoint remoteEP = new IPEndPoint(ipAddress, int.Parse(splits[1]));
             var state = new SocketCallbackObject { WorkSocket = m_socket, Callback = callback };
             m_socket.BeginConnect(remoteEP, new AsyncCallback(ConnectCallback), state);

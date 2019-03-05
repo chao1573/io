@@ -1,4 +1,9 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿using Entitas;
+using Entitas.CodeGeneration.Attributes;
+using Microsoft.Xna.Framework;
+
+[Game, Event(EventTarget.Self)]
+public class RotationComponent : IComponent
 {
-  public class $CLASS$ {$END$}
+    public Quaternion value;
 }

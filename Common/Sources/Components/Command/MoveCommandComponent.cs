@@ -1,4 +1,8 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿using Entitas;
+using Microsoft.Xna.Framework;
+
+[Command]
+public sealed class MoveCommandComponent:IComponent
 {
-  public class $CLASS$ {$END$}
+    public Vector2 value;
 }

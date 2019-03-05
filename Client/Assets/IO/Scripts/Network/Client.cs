@@ -55,15 +55,12 @@ namespace IO.Net
             m_transport.SocketClosedEvent += (sender, args) =>
             {
                 m_collationIds.Clear();
-                if (DisconnectEvent != null)
-                {
-                    DisconnectEvent();
-                }
+                DisconnectEvent?.Invoke();
             };
         }
         public void Connect(Action<bool> callback)
         {
-            m_transport.ConnectAsync(string.Format("{0}:{1}", Host, Port), (success) =>
+            m_transport.ConnectAsync($"{Host}:{Port}" , (success) =>
             {
                 if (success)
                 {
@@ -71,10 +68,7 @@ namespace IO.Net
                     m_heartbeatService.Start();
                 }
 
-                if (callback != null)
-                {
-                    callback(success);
-                }
+                callback?.Invoke(success);
             });
         }
 
@@ -89,7 +83,7 @@ namespace IO.Net
             message.CollationId = m_collationId;
             m_collationId++;
 
-            var pair = new KeyValuePair<Action<Envelope>, Action<Error>>(data => onSuccess(data), onError);
+            var pair = new KeyValuePair<Action<Envelope>, Action<Error>>(onSuccess, onError);
             m_collationIds.Add(m_collationId, pair);
 
             m_transport.SendAsync(message.ToByteArray(), completed =>

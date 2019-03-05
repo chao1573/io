@@ -1,10 +1,7 @@
-﻿using System;
-namespace Common.Sources.Components.Input
+﻿using Entitas;
+
+[Input]
+public sealed class ShootInputComponent : IComponent
 {
-    public class ShootInputComponent
-    {
-        public ShootInputComponent()
-        {
-        }
-    }
+    
 }

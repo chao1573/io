@@ -1,4 +1,5 @@
 ﻿using  Entitas;
-public sealed class JoinGameComponent:IComponent
+[Input]
+public sealed class JoinGameInputComponent:IComponent
 {
 }

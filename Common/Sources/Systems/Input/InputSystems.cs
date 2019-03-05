@@ -1,7 +1,10 @@
-﻿namespace Common.Api.Sources.Systems.Input
+﻿using Entitas;
+public sealed class InputSystems:Feature
 {
-    public class InputSystems
-    {
-        
-    }
+        public InputSystems(Contexts contexts)
+        {
+            Add(new JoinGameInputSystem(contexts));
+            Add(new MoveInputSystem(contexts));
+            Add(new ShootInputSystem(contexts));
+        }
 }

@@ -2,7 +2,7 @@
 using Entitas.CodeGeneration.Attributes;
 
 [Input]
-public sealed class InputIdComponent : IComponent
+public sealed class InputOwnerComponent : IComponent
 {
     [EntityIndex]
     public string value;

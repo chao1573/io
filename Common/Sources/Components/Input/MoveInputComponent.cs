@@ -1,10 +1,8 @@
-﻿using System;
-namespace Common.Sources.Components.Input
+﻿using Entitas;
+using Microsoft.Xna.Framework;
+
+[Input]
+public sealed class MoveInputComponent:IComponent
 {
-    public class MoveInputComponent
-    {
-        public MoveInputComponent()
-        {
-        }
-    }
+    public Vector2 direction;
 }

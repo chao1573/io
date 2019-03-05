@@ -4,10 +4,10 @@ using Entitas.Serialization;
 
 namespace Common
 {
-    public class BlueprintService 
+    public class BlueprintService :IService
     {
         private Dictionary<string, Blueprint> m_blueprintsDict;
-        private IBlueprints m_blueprints;
+        private readonly IBlueprints m_blueprints;
         
         public BlueprintService(IBlueprints blueprints)
         {

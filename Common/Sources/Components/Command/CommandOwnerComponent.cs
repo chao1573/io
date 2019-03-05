@@ -1,7 +1,9 @@
-﻿namespace Common.Api.Sources.Components.Command
+﻿using Entitas;
+using Entitas.CodeGeneration.Attributes;
+
+[Command]
+public sealed class CommandOwnerComponent:IComponent
 {
-    public class CommandOwnerComponent
-    {
-        
-    }
+    [EntityIndex]
+    public string value;
 }

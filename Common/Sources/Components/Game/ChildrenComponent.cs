@@ -1,4 +1,8 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿using Entitas;
+using System.Collections.Generic;
+
+[Game]
+public class ChildrenComponent:IComponent
 {
-  public class $CLASS$ {$END$}
+    public List<int> value;
 }

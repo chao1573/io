@@ -1,7 +1,9 @@
-﻿namespace Common
+﻿using Common.Data;
+
+namespace Common
 {
-    public class IConfigService
+    public interface IConfigService:IService
     {
-        
+        PlayerData GetPlayer(int id);
     }
 }

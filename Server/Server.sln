@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{4F74720B-FBD4-4E5B-8B61-59B86F895EE2}"
@@ -19,5 +19,7 @@ Global
 		{1F9CD91B-E6EE-49BB-AAC3-61E5D0AF8651}.Debug|x86.Build.0 = Debug|Any CPU
 		{1F9CD91B-E6EE-49BB-AAC3-61E5D0AF8651}.Release|x86.ActiveCfg = Release|Any CPU
 		{1F9CD91B-E6EE-49BB-AAC3-61E5D0AF8651}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

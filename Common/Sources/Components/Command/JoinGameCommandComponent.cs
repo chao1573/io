@@ -2,7 +2,7 @@
 using Entitas.CodeGeneration.Attributes;
 
 [Command]
-public class JoinGameCommand:IComponent
+public sealed class JoinGameCommandComponent:IComponent
 {
        
 }

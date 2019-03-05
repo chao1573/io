@@ -1,7 +1,7 @@
 ﻿using  Entitas;
 
 [Game]
-public class ParentComponnet:IComponent
+public class ParentComponent:IComponent
 {
     public int value;
 }

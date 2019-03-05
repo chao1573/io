@@ -1,4 +1,7 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿namespace Common
 {
-  public class $CLASS$ {$END$}
+    public interface ITimeService:IService
+    {
+        float FrameInterval { get; }
+    }
 }

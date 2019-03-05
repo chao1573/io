@@ -8,15 +8,24 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
+    public const int InputOwner = 0;
+    public const int JoinGameInput = 1;
+    public const int MoveInput = 2;
+    public const int ShootInput = 3;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
-
+        "InputOwner",
+        "JoinGameInput",
+        "MoveInput",
+        "ShootInput"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(InputOwnerComponent),
+        typeof(JoinGameInputComponent),
+        typeof(MoveInputComponent),
+        typeof(ShootInputComponent)
     };
 }

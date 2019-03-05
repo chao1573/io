@@ -1,7 +1,7 @@
-﻿namespace Common.Api.Sources.Components.Game
+﻿using Entitas;
+using Entitas.CodeGeneration.Attributes;
+public class IdComponent:IComponent
 {
-    public class IdComponent
-    {
-        
-    }
+    [PrimaryEntityIndex]
+    public int value;
 }

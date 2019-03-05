@@ -8,27 +8,57 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Asset = 0;
-    public const int AssetListener = 1;
-    public const int Destroyed = 2;
-    public const int DestroyedListener = 3;
-    public const int Position = 4;
+    public const int AngularSpeed = 0;
+    public const int Asset = 1;
+    public const int AssetListener = 2;
+    public const int Children = 3;
+    public const int Destroyed = 4;
+    public const int DestroyedListener = 5;
+    public const int Direction = 6;
+    public const int Id = 7;
+    public const int Parent = 8;
+    public const int PlayerId = 9;
+    public const int Position = 10;
+    public const int PositionListener = 11;
+    public const int Rotation = 12;
+    public const int RotationListener = 13;
+    public const int Speed = 14;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 15;
 
     public static readonly string[] componentNames = {
+        "AngularSpeed",
         "Asset",
         "AssetListener",
+        "Children",
         "Destroyed",
         "DestroyedListener",
-        "Position"
+        "Direction",
+        "Id",
+        "Parent",
+        "PlayerId",
+        "Position",
+        "PositionListener",
+        "Rotation",
+        "RotationListener",
+        "Speed"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(AngularSpeedComponent),
         typeof(AssetComponent),
         typeof(AssetListenerComponent),
+        typeof(ChildrenComponent),
         typeof(DestroyedComponent),
         typeof(DestroyedListenerComponent),
-        typeof(PositionComponent)
+        typeof(DirectionComponent),
+        typeof(IdComponent),
+        typeof(ParentComponent),
+        typeof(PlayerIdComponent),
+        typeof(PositionComponent),
+        typeof(PositionListenerComponent),
+        typeof(RotationComponent),
+        typeof(RotationListenerComponent),
+        typeof(SpeedComponent)
     };
 }

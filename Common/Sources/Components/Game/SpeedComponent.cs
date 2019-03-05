@@ -1,10 +1,8 @@
-﻿using System;
-namespace Common.Sources.Components.Game
+﻿using Entitas;
+[Game]
+public sealed class SpeedComponent : IComponent
 {
-    public class SpeedComponent
-    {
-        public SpeedComponent()
-        {
-        }
-    }
+    public float value;
+    public float maxValue;
 }
+

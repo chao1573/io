@@ -1,7 +1,7 @@
 ﻿using Entitas;
 
 [Game]
-public class RotationSpeedComponent:IComponent
+public class AngularSpeedComponent:IComponent
 {
     public float value;
 }

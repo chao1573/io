@@ -1,7 +1,8 @@
 ﻿using Entitas;
 using Entitas.CodeGeneration.Attributes;
-[Game, Event(true)]
+using Microsoft.Xna.Framework;
+[Game, Event(EventTarget.Self)]
 public class PositionComponent : IComponent
 {
-    public UnityEngine.Vector3 value;
+    public Vector3 value;
 }

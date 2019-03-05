@@ -1,7 +1,5 @@
-﻿namespace Common.Api.Sources.Components.Command
+﻿using Entitas;
+[Command]
+public class ShootCommandComponent:IComponent
 {
-    public class ShootCommandComponent
-    {
-        
-    }
 }

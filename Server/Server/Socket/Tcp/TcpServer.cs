@@ -24,9 +24,7 @@ namespace IO.Net.Tcp
 
         public void Listen(int port)
         {
-            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
-            IPAddress ipAddress = ipHostInfo.AddressList[0];  
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, port);
+            IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, port);
 
             m_listenSocket = new Socket(localEndPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
             m_listenSocket.Bind(localEndPoint);
